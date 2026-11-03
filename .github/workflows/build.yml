@@ -1,0 +1,62 @@
+name: Build Dualis 3070
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows
+            os: windows-latest
+          - name: macOS
+            os: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure (Windows)
+        if: runner.os == 'Windows'
+        run: cmake -B build -A x64
+
+      - name: Configure (macOS)
+        if: runner.os == 'macOS'
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
+
+      - name: Build
+        run: cmake --build build --config Release --parallel 4
+
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $dst = "MeteoraPlugins-Dualis3070-Windows"
+          New-Item -ItemType Directory -Force -Path $dst | Out-Null
+          Copy-Item -Recurse "build/Dualis3070_artefacts/Release/VST3" "$dst/VST3"
+          Copy-Item -Recurse "build/Dualis3070_artefacts/Release/Standalone" "$dst/Standalone"
+          Copy-Item "LICENSE.txt" "$dst/LICENSE.txt"
+          Compress-Archive -Path $dst -DestinationPath "$dst.zip"
+
+      - name: Package (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          DST="MeteoraPlugins-Dualis3070-macOS"
+          mkdir -p "$DST"
+          cp -R build/Dualis3070_artefacts/Release/VST3 "$DST/VST3"
+          cp -R build/Dualis3070_artefacts/Release/AU "$DST/AU"
+          cp -R build/Dualis3070_artefacts/Release/Standalone "$DST/Standalone"
+          cp LICENSE.txt "$DST/LICENSE.txt"
+          zip -r -y "$DST.zip" "$DST"
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: MeteoraPlugins-Dualis3070-${{ matrix.name }}
+          path: MeteoraPlugins-Dualis3070-*.zip
