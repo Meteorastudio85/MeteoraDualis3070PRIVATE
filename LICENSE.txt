@@ -1,0 +1,51 @@
+DUALIS 3070 - LICENZA D'USO / END USER LICENSE AGREEMENT
+Copyright (c) 2026 Meteora Plugins. Tutti i diritti riservati / All rights reserved.
+
+ITALIANO
+
+1. Licenza. Meteora Plugins concede all'utente una licenza personale, non esclusiva e non
+   trasferibile per installare e usare Dualis 3070 (il "Software") sui propri computer, anche
+   per produzioni musicali commerciali. L'audio elaborato con il Software appartiene all'utente.
+
+2. Restrizioni. Senza autorizzazione scritta di Meteora Plugins non e' consentito: rivendere,
+   noleggiare, sublicenziare o distribuire il Software; modificarlo, decompilarlo o
+   disassemblarlo, salvo quanto permesso dalla legge; rimuovere questa licenza o le
+   indicazioni di copyright.
+
+3. Proprieta'. Il Software, la grafica, il codice e i dati di misura in esso contenuti restano
+   di proprieta' di Meteora Plugins. "Fostex" e "3070" sono marchi o nomi dei rispettivi
+   proprietari e sono citati solo per descrivere l'hardware misurato; Meteora Plugins non e'
+   affiliata ne' approvata da Fostex.
+
+4. Nessuna garanzia. Il Software e' fornito "cosi' com'e'", senza garanzie di alcun tipo.
+   Meteora Plugins non e' responsabile di danni derivanti dall'uso o dall'impossibilita' di
+   usare il Software, nei limiti consentiti dalla legge.
+
+5. Risoluzione. La licenza termina automaticamente se l'utente ne viola i termini; in tal caso
+   l'utente deve rimuovere ogni copia del Software.
+
+ENGLISH
+
+1. License. Meteora Plugins grants you a personal, non-exclusive, non-transferable license to
+   install and use Dualis 3070 (the "Software") on your own computers, including for
+   commercial music production. Audio processed with the Software belongs to you.
+
+2. Restrictions. Without written permission from Meteora Plugins you may not: resell, rent,
+   sublicense or redistribute the Software; modify, decompile or disassemble it, except as
+   permitted by law; remove this license or any copyright notice.
+
+3. Ownership. The Software, its graphics, code and measurement data remain the property of
+   Meteora Plugins. "Fostex" and "3070" are names or trademarks of their respective owners,
+   mentioned only to describe the measured hardware; Meteora Plugins is not affiliated with
+   or endorsed by Fostex.
+
+4. No warranty. The Software is provided "as is", without warranty of any kind. To the extent
+   permitted by law, Meteora Plugins is not liable for any damage arising from the use of, or
+   inability to use, the Software.
+
+5. Termination. This license ends automatically if you breach its terms; you must then delete
+   all copies of the Software.
+
+THIRD-PARTY SOFTWARE
+This Software is built with JUCE (https://juce.com), used under the terms of its own license.
+VST is a registered trademark of Steinberg Media Technologies GmbH.
